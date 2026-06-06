@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.service-detail-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+}
+
+.service-detail-back {
+    display: inline-block;
+    color: #c5a880;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.service-detail-back:hover {
+    text-decoration: underline;
+}
+
+.service-detail-title {
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.service-detail-image {
+    width: 100%;
+    max-height: min(72vh, 640px);
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: block;
+    background: #151515;
+    image-rendering: auto;
+}
+
+.service-detail-description {
+    color: #a0a0a0;
+    font-size: 1.05rem;
+    max-width: 720px;
+}
