@@ -1922,3 +1922,303 @@ a {
         height: 300px !important;
     }
 }
+
+/* ==========================================================================
+   MOBILE PHONE RESPONSIVE FIX
+   Forces all sections visible on small screens where IntersectionObserver
+   threshold can fail for tall sections (services, creative, document sections).
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* CRITICAL FIX: Force all scroll-reveal sections visible on mobile.
+       The IntersectionObserver with threshold:0.15 doesn't fire on phones
+       for tall sections because 15% of the section is never in viewport. */
+    .scroll-reveal {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    /* Services grid: single column on phones */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px;
+    }
+
+    .creative-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Service cards: ensure visible with proper padding */
+    .service-card {
+        padding: 28px 20px;
+        text-align: center;
+    }
+
+    .service-icon {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+    }
+
+    .service-name {
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+    }
+
+    .service-description {
+        font-size: 0.82rem;
+        line-height: 1.5;
+    }
+
+    /* Category headings */
+    .category-heading {
+        font-size: 1.15rem;
+        letter-spacing: 1px;
+        gap: 10px;
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+    }
+
+    .category-heading i {
+        font-size: 1rem;
+    }
+
+    /* Service category block spacing */
+    .service-category-block {
+        margin-bottom: 50px;
+    }
+
+    /* Section headers */
+    .section-header {
+        margin-bottom: 36px;
+    }
+
+    .section-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+
+    /* Container padding */
+    .container {
+        width: 92%;
+        padding: 50px 0;
+    }
+
+    .container-fluid {
+        width: 92%;
+        padding: 50px 0;
+    }
+
+    /* Portfolio grid */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 14px;
+    }
+
+    .portfolio-item {
+        height: 260px !important;
+    }
+
+    .portfolio-filters {
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 0.65rem;
+    }
+
+    /* Why Choose Us grid */
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .why-card {
+        padding: 30px 24px;
+    }
+
+    .why-title {
+        font-size: 1.05rem;
+    }
+
+    .why-text {
+        font-size: 0.82rem;
+    }
+
+    /* About section images */
+    .about-image-wrapper {
+        height: 360px;
+    }
+
+    .about-img.main-img {
+        width: 80%;
+        height: 280px;
+    }
+
+    .about-img.sub-img {
+        width: 55%;
+        height: 200px;
+    }
+
+    .about-img-frame {
+        width: 75%;
+        height: 260px;
+    }
+
+    .about-lead {
+        font-size: 1.25rem;
+    }
+
+    .about-text {
+        font-size: 0.88rem;
+    }
+
+    /* Stats grid */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 24px 14px;
+    }
+
+    .stat-count {
+        font-size: 1.7rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+
+    /* Reviews */
+    .review-card {
+        padding: 30px 20px;
+    }
+
+    .review-text {
+        font-size: 0.88rem;
+        line-height: 1.7;
+    }
+
+    /* Location */
+    .map-wrapper {
+        height: 280px;
+    }
+
+    .map-details {
+        padding: 20px 16px;
+    }
+
+    .map-details .info-text {
+        font-size: 0.85rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .studio-footer {
+        padding: 50px 0 20px;
+    }
+
+    /* Hero section */
+    .hero-title {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+    }
+
+    .hero-badge {
+        font-size: 0.7rem;
+        letter-spacing: 4px;
+    }
+
+    .hero-tagline {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        padding: 12px 24px;
+        font-size: 0.75rem;
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+        bottom: 20px;
+    }
+
+    /* Lightbox */
+    .lightbox-content {
+        max-width: 95%;
+        max-height: 85%;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+        font-size: 2rem;
+    }
+
+    .lightbox-nav {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+    /* Back to top & WhatsApp buttons */
+    .back-to-top-btn {
+        width: 46px;
+        height: 46px;
+        bottom: 85px;
+        right: 16px;
+        font-size: 0.9rem;
+    }
+
+    .whatsapp-float-btn {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 16px;
+        font-size: 1.5rem;
+    }
+
+    /* Gold border card */
+    .gold-border-card::before {
+        font-size: 0.5rem;
+        top: 10px;
+        right: 14px;
+    }
+}
